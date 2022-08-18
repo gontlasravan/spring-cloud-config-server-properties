@@ -1,0 +1,20 @@
+server:
+  port: 8082
+
+spring:
+    app:
+      name: Products
+      description: This ${app.name} app provide apis from  SpringCloudConfig Server for fetch,insert products from mongo products Collection.
+
+  data:
+    mongodb:
+      host: localhost
+      port: 27017
+      database: products_db
+
+    cache:
+      type: redis
+      redis:
+        cache-null-values: true
+        time-to-live: 40000
+        port : 6379
